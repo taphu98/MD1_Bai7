@@ -5,6 +5,28 @@
     <title>Title</title>
 </head>
 <body>
+<h2>Tính chỉ số BMI của cơ thể</h2>
+<p>Cân nặng</p>
+<input type="text" id="weight">KG
+<p>Chiều cao</p>
+<input type="text" id="height">m <br><br>
+<button onclick="result()" id="result">Result</button>
 
+<script>
+    function result(){
+        let weight = document.getElementById('weight').value;
+        let height = document.getElementById('height').value;
+        let bmi = weight / (height * height)
+        if (bmi < 18) {
+            document.getElementById('result').innerText = "Result: Underweight";
+        }else if (bmi < 25.0) {
+            document.getElementById('result').innerText = "Result: Normal";
+        }else if (bmi < 30.0) {
+            document.getElementById('result').innerText = "Result: Overweight";
+        }else {
+            document.getElementById('result').innerText = "Result: Obese"
+        }
+    }
+</script>
 </body>
 </html>
