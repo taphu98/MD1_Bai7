@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<h1>EM CÓ YÊU ANH KHÔNG ?</h1>
+<button id="co" onclick="bam()" style="top:100px; left: 100px " >Yes</button>
+<button id="khong" onmouseover="chay()" style="top: 100px; left : 200px">No</button>
+<script>
+    function bam(){
+        document.write('Anh cũng yêu em');
+    }
+    function chay(){
+        let chieucao = window.innerHeight;
+        let chieudai = window.innerWidth;
+        document.getElementById('khong').style.top = Math.floor(Math.random() * innerHeight) + 'px';
+        document.getElementById('khong').style.left = Math.floor(Math.random() * innerWidth)+ 'px';
+    }
+</script>
+</body>
+</html>
