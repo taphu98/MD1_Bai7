@@ -3,8 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        img {
+            box-shadow: blue 4px 4px 9px;
+        }
+    </style>
 </head>
 <body>
+<img id="anh1" src="img/cho1.jpg" style="width: 600px ; height: 100px" onclick="anVao()">
+<br>
+<img id="anh2" src="img/meo2.jpg" style="width: 600px ; height: 100px" onclick="anVao1()">
+<br>
+<img id="anh3" src="img/ho3.jpg" style="width: 600px ; height: 100px" onclick="anVao2()">
+<script>
 
+    let count1 = 0
+    let count2 = 1
+    let count3 = 2
+
+    let img1 = document.getElementById('anh1')
+    let img2 = document.getElementById('anh2')
+    let img3 = document.getElementById('anh3')
+
+    function anVao() {
+        count1++;
+
+        if (count1 == 1) {
+            img1.src = "img/meo1.jpg";
+        } else if (count1 == 2) {
+            img1.src = "img/ho1.jpg";
+        } else {
+            count1 = 0
+            img1.src = "img/cho1.jpg"
+        }
+        checkShadow()
+    }
+
+    function anVao1() {
+        count2++;
+        if (count2 == 1) {
+            img2.src = "img/meo2.jpg";
+        } else if (count2 == 2) {
+            img2.src = "img/ho2.jpg";
+        } else {
+            count2 = 0
+            img2.src = "img/cho2.jpg"
+        }
+        checkShadow()
+    }
+
+    function anVao2() {
+        count3++;
+        // if (count3 > 2) {
+        //     count3 = 0;
+        if (count3 == 1) {
+            img3.src = "img/meo3.jpg";
+        } else if (count3 == 2) {
+            img3.src = "img/ho3.jpg";
+        } else {
+            count3 = 0
+            img3.src = "img/cho3.jpg"
+        }
+        checkShadow()
+    }
+
+    function checkShadow() {
+        console.log('count1', count1);
+        console.log('count2', count2);
+        console.log('count3', count3);
+        if (count1 == count2 && count2 == count3) {
+            img1.style.boxShadow = 'red 4px 4px 9px';
+            img2.style.boxShadow = 'red 4px 4px 9px';
+            img3.style.boxShadow = 'red 4px 4px 9px';
+        } else {
+            img1.style.boxShadow = 'blue 4px 4px 9px';
+            img2.style.boxShadow = 'blue 4px 4px 9px';
+            img3.style.boxShadow = 'blue 4px 4px 9px';
+        }
+
+    }
+</script>
 </body>
 </html>
