@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            position : absolute;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me ??? </h1>
+<button id="co" onclick="yeu()">Yes</button>
+<button id="khong" onmouseover="khongyeu()">No</button>
+<script>
+    function yeu(){
+        document.write('Anh cũng yêu em');
+    }
+    function khongyeu(){
+        let chieucao = window.innerHeight;
+        let chieudai = window.innerWidth;
+        document.getElementById('khong').style.top = Math.floor(Math.random() * innerHeight) + 'px'
+        document.getElementById('khong').style.left = Math.floor(Math.random() * innerWidth) + 'px'
+    }
+
+</script>
+</body>
+</html>
