@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="age">Tuổi
+<button id="check" onclick="kiemTra()">Kiểm tra</button>
+<script>
+    console.log();
+    function kiemTra(){
+        let tuoi1 = document.getElementById('age').value;
+        if (tuoi1 >= 15) {
+            document.getElementById('check').innerText = 'Đủ tuổi';
+        }else {
+            document.getElementById('check').innerText = 'Không đủ tuổi';
+        }
+    }
+</script>
+</body>
+</html>

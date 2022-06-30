@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so1">Số 1
+<input type="text" id="so2">Số 2
+<input type="text" id="so3">Số 3
+<button id="ketqua" onclick="so()">Kết quả</button>
+<script>
+    function so(){
+        let num1 = document.getElementById('so1').value;
+        let num2 = document.getElementById('so2').value;
+        let num3 = document.getElementById('so3').value;
+        if (num1 > num2){
+            if (num1 > num3) {
+                document.getElementById('ketqua').innerText = 'Số' + num1 + 'là số lớn nhất';
+            }else{
+                document.getElementById('ketqua').innerText = 'Số' + num3 + 'là số lớn nhất';
+                }
+            }else{
+            if(num2 > num3) {
+                document.getElementById('ketqua').innerText = 'Số' + num2 + 'là số lớn nhất';
+            }else{
+                document.getElementById('ketqua').innerText = 'Số' + num3 + 'là số lớn nhất';
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
