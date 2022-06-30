@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Điểm bài kiểm tra</h2><br>
+<input id="kiemtra" type="text" ><br>
+<h2>Điểm thi giữa kì</h2><br>
+<input id="giuaki" type="text"><br>
+<h2>Điểm thi cuối kì</h2><br>
+<input id="cuoiki" type="text"><br>
+<button  onclick="diembaikiemtra()">Kết quả</button>
+<h1 id="ketqua"></h1>
+<script>
+
+
+    function diembaikiemtra(){
+        let x = +document.getElementById('kiemtra').value;
+        let y = +document.getElementById('giuaki').value;
+        let z = +document.getElementById('cuoiki').value;
+
+        let diem = (x + y + z)/3;
+        console.log(diem)
+
+        if (diem<30) {
+            document.getElementById('ketqua').innerText = 'E';
+        }else if(diem<=45){
+            document.getElementById('ketqua').innerText = 'D';
+        }else if(diem<=60){
+            document.getElementById('ketqua').innerText = 'C';
+        }else if (diem<=75){
+            document.getElementById('ketqua').innerText = 'B';
+        }else{
+            document.getElementById('ketqua').innerText = 'A';
+        }
+
+    }
+</script>
+</body>
+</html>
