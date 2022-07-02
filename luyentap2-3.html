@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập độ dài cạnh của hình vuông</h1>
+<input id="canh" type="text"><br>
+<button id="kq" onclick="dientich()" >Kết quả</button>
+<script>
+    function dientich(){
+        let a = document.getElementById('canh').value;
+        let S = a * a ;
+        document.getElementById('kq').innerText = 'Diện tích hình vuông là ' +' ' + S;
+
+    }
+</script>
+
+</body>
+</html>

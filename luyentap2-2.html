@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập số mét</h1>
+<input id="som" type="text">
+<button id="change" onclick="doi()">Đổi</button>
+<script>
+    function doi(){
+        let m = document.getElementById('som').value;
+        let ft = m*3.2808;
+        document.getElementById('change').innerText = ft+ ' ' + 'feet';
+    }
+</script>
+</body>
+</html>
