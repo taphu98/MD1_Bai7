@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập chiều dài</h1><br>
+<input id="dai" type="text"><br>
+<h1>Nhập chiều rộng</h1><br>
+<input id="rong" type="text"><br>
+<button onclick="dientich()">Kết quả</button>
+<p id="ketqua"></p>
+<script>
+    function dientich() {
+        let a = document.getElementById('dai').value;
+        let b = document.getElementById('rong').value;
+        let S = a*b;
+        document.getElementById('ketqua').innerText = 'Diện tích của hình chữ nhật là ' + S;
+        
+    }
+
+</script>
+</body>
+</html>
