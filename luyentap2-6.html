@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Số 1 =</h1>
+<input id="soa" type="text"><br>
+<h1>Số 2 = </h1>
+<input id="sob" type="text"><br>
+<button id="ketqua" onclick="nghiem()">Kết quả </button>
+
+<script>
+    function nghiem(){
+        let a = document.getElementById('soa').value;
+        let b = document.getElementById('sob').value;
+        let x = -b/a;
+        if (a == 0){
+            document.getElementById('ketqua').innerText = 'Phương trình vô nghiệm';
+        }else{
+            document.getElementById('ketqua').innerText = 'Nghiệm của phương trình là ' + x;
+        }
+
+    }
+</script>
+
+</body>
+</html>
