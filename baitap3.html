@@ -3,8 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 200px;
+            height: 200px;
+            table-layout: fixed;
+            text-align: center;
+        }
+        input{
+            width: 96%;
+            text-align: right;
+            border-radius: 5px;
+            border: 1px solid #44738f;
+            color: #2e4c64;
+        }
+        button{
+            width: 90%;
+            border: 1px solid #44738f;
+            border-radius: 5px;
+            color:  #2e4c64;
+        }
+    </style>
 </head>
 <body>
+
+<table border="1">
+    <tr>
+        <td colspan="4">
+            <input type="text" id="display">
+        </td>
+    </tr>
+    <tr>
+        <td><button id="open" onclick="calculate('1')">1</button></td>
+        <td><button id="open" onclick="calculate('2')">2</button></td>
+        <td><button id="open" onclick="calculate('3')">3</button></td>
+        <td><button id="open" onclick="calculate('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button id="open" onclick="calculate('4')">4</button></td>
+        <td><button id="open" onclick="calculate('5')">5</button></td>
+        <td><button id="open" onclick="calculate('6')">6</button></td>
+        <td><button id="open" onclick="calculate('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button id="open" onclick="calculate('7')">7</button></td>
+        <td><button id="open" onclick="calculate('8')">8</button></td>
+        <td><button id="open" onclick="calculate('9')">9</button></td>
+        <td><button id="open" onclick="calculate('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button id="open" onclick="reset()">C</button></td>
+        <td><button id="open" onclick="calculate('0')">0</button></td>
+        <td><button id="open" onclick="answer()">=</button></td>
+        <td><button id="open" onclick="calculate('/')">/</button></td>
+    </tr>
+</table>
+
+<script>
+
+    function calculate(a) {
+        document.getElementById('display').value += a;
+    }
+    function reset() {
+        document.getElementById('display').value = null
+    }
+    function answer() {
+        if (document.getElementById('display').value)
+            document.getElementById('display').value = eval(document.getElementById('display').value)
+    }
+</script>
 
 </body>
 </html>
